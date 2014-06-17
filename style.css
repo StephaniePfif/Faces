@@ -1,0 +1,25 @@
+aside {
+  width:200px;
+}
+
+div#columnleft {
+    float: left;
+    width: 380px;
+    margin-right: 10px;
+    background: rgb(190,192,192);
+}
+div#columnright {
+    float: right;
+    width: 340px;
+    margin-left: 10px;
+    background: rgb(0,0,0);
+}
+div#columncenter {
+    overflow: hidden;
+    background: white;
+}
+
+footer {
+  clear:both;
+  text-align:center;
+}
