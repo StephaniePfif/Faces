@@ -1,91 +1,167 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>FaCeS</title>
+	<title>FaceLovin'</title>
 	<meta charset="UTF-8">
+	<meta name="description" content="Le blog photo le plus stylé du cosmos intersidéral" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
+
 <body>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	<header>
-		<h1>FaCeS</h1>
+		<h1>Titre de mon blog trop cool</h1>
 		
-		<nav> 
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation"> 
+			<div class="container">
 		
 			<img src="photos/stephbykanako.png">
 		
-			<ul> 
+			<ul class="nav-bar"> 
 				<li>New-York</li>  
 				<li>Paris</li> 
 				<li>Melbourne</li> 
 			</ul>
 
-			<ul> 
+			<ul class="nav-bar"> 
 				<li> <a href="#">Fr</a> </li>  
 				<li><a href="#">En</a></li>
 			</ul>
-
-		
+			</div>
 		</nav>
 	</header>
 
 	<section>
 		<article> 
-			<img src="photos/vincenttilligolo.png">
-			<h2> New-York </h2>
-			<p> Texte qui n'apparaîtra que lorsque je passe le curseur </p>
-			<img src="icones/fleche.jpg" >
-			       <!-- ou bien -->
-			<i class="fa fa-angle-double-down"></i> fa-angle-double-down
+			<!-- GRANDE PHOTO + TEXTE -->
+
+			<div id="slider">
+				<div id="slidertext"> 
+
+					<img src="photos/couplehongkong.png">
+
+					<div class="content" > 
+						<h2> New-York </h2>
+						<h3>Texte qui n'apparaîtra que lorsque je passe le curseur </h3></div>
+					</div>
+				</div>
+				<!--<i class="fa fa-angle-double-down"></i>-->
+			</div>
+
+				<!-- On passe aux 3 vignettes -->
+						<div class="row">
+						  <div class="col-sm-6 col-md-4">
+						    <div class="thumbnail">
+						      	<img src="photos/vincenttilligolo.png">
+						      <div class="caption">
+						        <p>Texte photo vignette 1</p>
+						        <p><a href="#" class="btn btn-primary" role="button">Button</a> </p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						<div class="row">
+						  <div class="col-sm-6 col-md-4">
+						    <div class="thumbnail">
+						      	<img src="photos/vincenttilligolo.png">
+						      <div class="caption">
+						        <p>Texte photo vignette 1</p>
+						        <p><a href="#" class="btn btn-primary" role="button">Button</a> </p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						<div class="row">
+						  <div class="col-sm-6 col-md-4">
+						    <div class="thumbnail">
+						      	<img src="photos/vincenttilligolo.png">
+						      <div class="caption">
+						        <p>Texte photo vignette 1</p>
+						        <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+
+				<!-- Fin des 3 vignettes -->
 		</article>
 
 		<article> 
-			<img src="photos/saidlecaid.png"> 
-			<h2>Paris </h2>
-			<p>Texte qui n'apparaîtra que lorsque je passe le curseur</p>
-			<img src="icones/fleche.jpg">
-			       <!-- ou bien -->
-			<i class="fa fa-angle-double-down"></i> fa-angle-double-down
+			<!-- GRANDE PHOTO+TEXTE -->
+			<div id="slider">
+			<img src="photos/teamproprete.png">
+				<div id="slidertext">
+					<h2>Paris</h2>
+					<h3>Texte qui n'apparaîtra que lorsque je passe le curseur </h3>
+				</div>
+			<i class="fa fa-angle-double-down"></i>
+			</div>
+				<!-- On passe aux 3 vignettes -->
+				<img src="photos/saidlecaid.png">
+				<p>Texte photo vignette 1</p>
+				<img src="photos/saidlecaid.png">
+				<p>Texte photo vignette 2</p>
+				<img src="photos/saidlecaid.png">
+				<p>Texte photo vignette 3</p> 
+				<!-- Fin des 3 vignettes -->
 		</article>
+
 
 		<article> 
-			<img src="photos/stephbykanako.jpg">
-			<h2>Melbourne</h2>
-			<p>Texte qui n'apparaîtra que lorsque je passe le curseur</p>
-			<img src="icones/fleche.jpg">
-			       <!-- ou bien -->
-			<i class="fa fa-angle-double-down"></i> fa-angle-double-down
+			<!-- GRANDE PHOTO+TEXTE -->
+			<div id="slider">
+			<img src="photos/noncoupleparis.png">
+				<div id="slidertext">
+					<h2> Melbourne </h2>
+					<h3>Texte qui n'apparaîtra que lorsque je passe le curseur </h3>
+				</div>
+			<i class="fa fa-angle-double-down"></i>
+			</div>
+				<!-- On passe aux 3 vignettes -->
+				<img src="photos/vincenttilligolo.png">
+				<p>Texte photo vignette 1</p>
+				<img src="photos/vincenttilligolo.png">
+				<p>Texte photo vignette 2</p>
+				<img src="photos/vincenttilligolo.png">
+				<p>Texte photo vignette 3</p> 
+				<!-- Fin des 3 vignettes -->
 		</article>
-
 
 	</section>
 
 	<aside>
 		<div>
-			<h3> Follow me</h3> 
+			<h3>Follow me</h3> 
 				<ul> 
-					<li> <a href="#">Facebook</a> </li>  
-					<li><a href="#">Pinterest</a></li>
+					<li> <a target="_blank" href="https://www.facebook.com/gueulesdeparisiens?ref_type=bookmark">Facebook</a> </li>  
+					<li><a target="_blank" href="http://www.pinterest.com/gueulesdeparis/">Pinterest</a></li>
 				</ul>
 		</div>
 
 		<div>
 			 <h3> Get in touch </h3>
-				<form action="stephaniepfeiffer91@gmail.com" method="post" name="contact">
-					<textarea name="message" rows="2" cols="30"></textarea>
-					<p><input type="submit" value="envoyer"></p>
-				</form>
+				<form action="http://forms.brace.io/stephanie@gueulesdeparisiens.com" method="POST">
+    <input type="text" name="name">
+    <input type="email" name="_replyto">
+    <input type="submit" value="Send">
+</form>
 		</div>
 	</aside>
 
 
 	<footer> 
-		<ul>
-			<li> Search </li>
-			<li> Categories </li>
-			<li> Générateur de photos ? </li>
-		</ul>
+			<ul class="nav-bar">
+				<li>Search </li>
+				<li>Categories </li>
+				<li>Générateur de photos ? </li>
+			</ul>
 	</footer>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </body>
 </html>
