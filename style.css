@@ -1,165 +1,953 @@
-body { padding-top: 100px; }
-
- h1 {
-  text-align: center;
-  font-family: grand hotel;
-  font-size: 200%;
-padding-bottom: 3px;
+/* normalize.css v3.0.1 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 9, css/_reset.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
 }
 
- h2 {
+/**
+ * Remove default margin.
+ */
+/* line 19, css/_reset.scss */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 43, css/_reset.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 55, css/_reset.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 65, css/_reset.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+/* line 76, css/_reset.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 87, css/_reset.scss */
+a {
+  background: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 96, css/_reset.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 107, css/_reset.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 116, css/_reset.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 124, css/_reset.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* line 133, css/_reset.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 142, css/_reset.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 151, css/_reset.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 160, css/_reset.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 167, css/_reset.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 171, css/_reset.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 182, css/_reset.scss */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 190, css/_reset.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+/* line 201, css/_reset.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 209, css/_reset.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 219, css/_reset.scss */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 230, css/_reset.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+/* line 254, css/_reset.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 264, css/_reset.scss */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 276, css/_reset.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 291, css/_reset.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 301, css/_reset.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 310, css/_reset.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 320, css/_reset.scss */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 333, css/_reset.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 345, css/_reset.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 355, css/_reset.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 369, css/_reset.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 377, css/_reset.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 388, css/_reset.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 397, css/_reset.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 406, css/_reset.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 417, css/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 423, css/_reset.scss */
+td,
+th {
+  padding: 0;
+}
+
+/*// CSS Reset from Lisa Catalano => https://github.com/lisacatalano/sass_step/tree/9-Import/css */
+/* line 432, css/_reset.scss */
+html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, em, img, small, strong, sub, sup, var,
+b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, figure, footer, header, hgroup, menu, nav, section, menu, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* line 441, css/_reset.scss */
+article, aside, figure, footer, header, hgroup, nav, section {
+  display: block;
+}
+
+/* line 442, css/_reset.scss */
+nav ul {
+  list-style: none;
+}
+
+/* line 443, css/_reset.scss */
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+
+/* line 444, css/_reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 445, css/_reset.scss */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+/* line 447, css/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 448, css/_reset.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 449, css/_reset.scss */
+input, select {
+  vertical-align: middle;
+}
+
+/* line 452, css/_reset.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+}
+
+/* line 453, css/_reset.scss */
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+/*// Accessible focus treatment */
+/* line 456, css/_reset.scss */
+a:hover, a:active {
+  outline: none;
+}
+
+/*// hand cursor on clickable input elements */
+/* line 459, css/_reset.scss */
+label, input[type=button], input[type=submit], button {
+  cursor: pointer;
+}
+
+/*//  j.mp/webkit-tap-highlight-color */
+/* line 462, css/_reset.scss */
+a:link {
+  -webkit-tap-highlight-color: #FF5E99;
+}
+
+/*// always force a scrollbar in non-IE */
+/* line 465, css/_reset.scss */
+html {
+  overflow-y: scroll;
+}
+
+/*// make buttons play nice in IE */
+/* line 468, css/_reset.scss */
+button {
+  width: auto;
+  overflow: visible;
+}
+
+/*// bicubic resizing for non-native sized IMG */
+/* line 471, css/_reset.scss */
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 473, css/_reset.scss */
+ul, ol {
+  list-style-type: none;
+}
+
+/* line 477, css/_reset.scss */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* line 482, css/_reset.scss */
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ### HOME ### */
+/* line 2, css/_index.scss */
+body {
+  padding-top: 100px;
+}
+
+/* line 4, css/_index.scss */
+h1 {
+  text-align: center;
+  font-family: grand hotel;
+  font-weight: lighter;
+  font-size: 200%;
+  padding-bottom: 3px;
+  color: #32383d;
+}
+
+/* line 13, css/_index.scss */
+h2 {
   text-align: center;
   font-family: grand hotel;
   line-height: 100%;
 }
 
-nav{
-padding-top: 22px;
+/* line 19, css/_index.scss */
+nav {
+  padding-top: 22px;
 }
 
-#villes{
-    text-align: center;
-    word-spacing: 60px;
+/* line 23, css/_index.scss */
+#villes {
+  text-align: center;
+  word-spacing: 70px;
 }
 
-.villes{
-color: #32383D;
-text-align: center;
-font-family: Quicksand;
-font-size: 130%;
-line-height: 120%;
+/* line 28, css/_index.scss */
+.villes {
+  color: #32383D;
+  text-align: center;
+  font-family: Quicksand;
+  font-size: 20px;
+  line-height: 100%;
 }
 
 /* #languesreseaux{
     display: inline-block;
 } */
-
- .langues{
+/* line 40, css/_index.scss */
+.langues {
   border-left: 10px;
   margin-left: 10px;
 }
 
-header .fa{ 
-display: inline-block;
-float: right;
-font-family: FontAwesome;
-font-style: normal;
-font-weight: normal;
-line-height: 1;
-border-right: 10px;
-padding-right: 10px;
-padding-left: 10px;
+/* line 45, css/_index.scss */
+header .fa {
+  display: inline-block;
+  float: right;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  border-right: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
+/* line 57, css/_index.scss */
 .caption {
-display: center;
-text-align: justify;
+  display: center;
+  text-align: justify;
 }
 
+/* line 62, css/_index.scss */
 .aprecuvignette {
-font-size: 25px;
+  font-size: 25px;
 }
 
+/* line 66, css/_index.scss */
 .btn-primary {
-background-image: -webkit-linear-gradient(top,#A7B4C0 0,#A7B4C0 100%);
-border-color: #A7B4C0;
-float: center;
+  background-image: -webkit-linear-gradient(top, #a7b4c0 0, #a7b4c0 100%);
+  border-color: #A7B4C0;
+  float: center;
 }
 
-.btndisplay{
-float:center;
-text-align: center;
+/* line 72, css/_index.scss */
+.btndisplay {
+  float: center;
+  text-align: center;
 }
 
-#footer{
-display: inline;
-text-align: center;
-font-size: 28px;
-color: #32383D;
+/* line 77, css/_index.scss */
+#footer {
+  display: inline;
+  text-align: center;
+  font-size: 28px;
+  color: #32383d;
 }
 
+/* line 84, css/_index.scss */
 #slider {
-  display: table; /* déclenche le comportement table */
+  display: table;
+  /* déclenche le comportement table */
   width: 100%;
   height: 100%;
   padding-bottom: 5px;
 }
 
-#slider img{
-    display: block;
-    width: 100%;
-    opacity: 0.8;
+/* line 91, css/_index.scss */
+#slider img {
+  display: block;
+  width: 100%;
+  opacity: 0.8;
 }
 
-#slidertext{
-    display: table-cell; /* déclenche le comportement cellule de table */
-    width: 100%;
-    height: 100%;
-    position: relative;
+/* line 97, css/_index.scss */
+#slidertext {
+  display: table-cell;
+  /* déclenche le comportement cellule de table */
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
-#slidertext .content{ 
+/* line 104, css/_index.scss */
+#slidertext .content {
   height: 100px;
-  margin-top: -50px; /* Hauteur / 2 : 100 / 2 = 50*/
+  margin-top: -50px;
+  /* Hauteur / 2 : 100 / 2 = 50*/
   top: 50%;
   width: 100%;
   position: absolute;
   color: white;
   font-size: 60px;
   text-align: center;
-  text-shadow: 2px 3px 10px rgba(0,0,0,0.75);
+  text-shadow: 2px 3px 10px rgba(0, 0, 0, 0);
 }
 
 /* MISE EN FORME DE MES VIGNETTES */
-.vignettes{
+/* line 117, css/_index.scss */
+.vignettes {
   display: none;
 }
+
+/* line 120, css/_index.scss */
 article:hover .vignettes {
   display: inline;
 }
 
-@media (max-width: 990px){
+/* MEDIA QUERIES POUR LE RESPONSIVE */
+@media (max-width: 990px) {
+  /* line 126, css/_index.scss */
   .cachevignette3 {
-  display: none;
+    display: none;
   }
 }
-
-@media (min-width:320px) and (max-width: 490px) {
+@media (min-width: 320px) and (max-width: 490px) {
+  /* line 132, css/_index.scss */
   h2 {
-  font-size: 100%;
+    font-size: 100%;
   }
-  a. #villes{
+
+  /* line 135, css/_index.scss */
+  a #villes {
     font-size: 30px;
     word-spacing: 10px;
   }
 }
-
 @media (min-width: 420px) {
+  /* line 142, css/_index.scss */
   h2 {
-  font-size: 170%;
+    font-size: 170%;
   }
 }
-
-
-#columnleft {
-    float: left;
-    width: 380px;
-    margin-right: 10px;
-    background: rgb(190,192,192);
-}
-#columnright {
-    float: right;
-    width: 340px;
-    margin-left: 10px;
-    background: rgb(0,0,0);
-}
-#columncenter {
-    overflow: hidden;
-    background: white;
-}
-
-
+/* FOOTER */
+/* line 149, css/_index.scss */
 footer {
-  clear:both;
-  text-align:center;
+  clear: both;
+  word-spacing: 40px;
+  text-align: center;
+  color: #32383D;
+  font-family: quicksand;
+  font-size: 20px;
+}
+
+/* line 158, css/_index.scss */
+footer a {
+  color: #32383D;
+  font-size: 10px;
+}
+
+/* ### HOME ### */
+/* line 6, css/style.scss */
+body {
+  padding-top: 100px;
+}
+
+/* line 8, css/style.scss */
+h1 {
+  text-align: center;
+  font-family: grand hotel;
+  font-size: 200%;
+  padding-bottom: 8px;
+  font-weight: 100;
+}
+
+/* line 16, css/style.scss */
+h2 {
+  text-align: center;
+  font-family: grand hotel;
+  line-height: 100%;
+}
+
+/* line 22, css/style.scss */
+nav {
+  padding-top: 22px;
+}
+
+/* line 26, css/style.scss */
+#villes {
+  text-align: center;
+  word-spacing: 70px;
+}
+
+/* line 31, css/style.scss */
+.villes {
+  color: #32383D;
+  text-align: center;
+  font-family: Quicksand;
+  font-size: 20px;
+  line-height: 100%;
+}
+
+/* #languesreseaux{
+    display: inline-block;
+} */
+/* line 43, css/style.scss */
+.langues {
+  border-left: 10px;
+  margin-left: 10px;
+}
+
+/* line 48, css/style.scss */
+header .fa {
+  display: inline-block;
+  float: right;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  border-right: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/* line 60, css/style.scss */
+.caption {
+  display: center;
+  text-align: justify;
+}
+
+/* line 65, css/style.scss */
+.aprecuvignette {
+  font-size: 25px;
+}
+
+/* line 69, css/style.scss */
+.btn-primary {
+  background-image: -webkit-linear-gradient(top, #a7b4c0 0, #a7b4c0 100%);
+  border-color: #A7B4C0;
+  float: center;
+}
+
+/* line 75, css/style.scss */
+.btndisplay {
+  float: center;
+  text-align: center;
+}
+
+/* line 80, css/style.scss */
+#footer {
+  display: inline;
+  text-align: center;
+  font-size: 28px;
+  color: #32383D;
+}
+
+/* line 87, css/style.scss */
+#slider {
+  display: table;
+  /* déclenche le comportement table */
+  width: 100%;
+  height: 100%;
+  padding-bottom: 5px;
+}
+
+/* line 94, css/style.scss */
+#slider img {
+  display: block;
+  width: 100%;
+  opacity: 0.8;
+}
+
+/* line 100, css/style.scss */
+#slidertext {
+  display: table-cell;
+  /* déclenche le comportement cellule de table */
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* line 107, css/style.scss */
+#slidertext .content {
+  height: 100px;
+  margin-top: -50px;
+  /* Hauteur / 2 : 100 / 2 = 50*/
+  top: 50%;
+  width: 100%;
+  position: absolute;
+  color: white;
+  font-size: 60px;
+  text-align: center;
+  text-shadow: 2px 3px 10px rgba(0, 0, 0, 0);
+}
+
+/* MISE EN FORME DE MES VIGNETTES */
+/* line 120, css/style.scss */
+.vignettes {
+  display: none;
+}
+
+/* line 123, css/style.scss */
+article:hover .vignettes {
+  display: inline;
+}
+
+/* MEDIA QUERIES POUR LE RESPONSIVE */
+@media (max-width: 990px) {
+  /* line 129, css/style.scss */
+  .cachevignette3 {
+    display: none;
+  }
+}
+@media (min-width: 320px) and (max-width: 490px) {
+  /* line 135, css/style.scss */
+  h2 {
+    font-size: 100%;
+  }
+
+  /* line 138, css/style.scss */
+  a #villes {
+    font-size: 30px;
+    word-spacing: 10px;
+  }
+}
+@media (min-width: 420px) {
+  /* line 145, css/style.scss */
+  h2 {
+    font-size: 170%;
+  }
+}
+/* FOOTER */
+/* line 152, css/style.scss */
+footer {
+  clear: both;
+  word-spacing: 40px;
+  text-align: center;
+  color: #32383D;
+  font-family: quicksand;
+  font-size: 20px;
+}
+
+/* line 161, css/style.scss */
+footer a {
+  color: #32383D;
+  font-size: 10px;
+}
+
+/* MISE EN FORME DE MES PAGES VILLES */
+/* line 167, css/style.scss */
+.uk-grid > * {
+  margin: 0;
+  padding-left: 25px;
+  float: left;
 }
