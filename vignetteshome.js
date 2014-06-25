@@ -1,0 +1,1 @@
+$('slidertext') .scrollspy({target '<i class="fa fa-angle-down"></i>'});

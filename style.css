@@ -568,58 +568,90 @@ a:hover {
 }
 
 /* ### HOME ### */
-/* line 2, css/_index.scss */
+/* line 1, css/_index.scss */
 body {
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
-/* line 4, css/_index.scss */
+/* line 1, css/_index.scss */
 h1 {
   text-align: center;
   font-family: grand hotel;
-  font-weight: lighter;
-  font-size: 200%;
-  padding-bottom: 3px;
-  color: #32383d;
+  font-size: 250%;
+  padding-bottom: 10px;
+  font-weight: 100;
 }
 
-/* line 13, css/_index.scss */
+/* line 1, css/_index.scss */
 h2 {
   text-align: center;
   font-family: grand hotel;
   line-height: 100%;
 }
 
-/* line 19, css/_index.scss */
+/* line 1, css/_index.scss */
 nav {
-  padding-top: 22px;
+  padding-top: 12px;
+  display: inline-block;
 }
 
-/* line 23, css/_index.scss */
+/* line 1, css/_index.scss */
 #villes {
   text-align: center;
-  word-spacing: 70px;
+  word-spacing: 10px;
 }
 
-/* line 28, css/_index.scss */
-.villes {
+/* line 1, css/_index.scss */
+#villes li {
+  display: inline-block;
+}
+
+/* line 1, css/_index.scss */
+.menu-villes-container {
   color: #32383D;
   text-align: center;
   font-family: Quicksand;
-  font-size: 20px;
+  font-size: 95%;
+  word-spacing: 40%;
   line-height: 100%;
 }
 
-/* #languesreseaux{
-    display: inline-block;
-} */
-/* line 40, css/_index.scss */
-.langues {
-  border-left: 10px;
-  margin-left: 10px;
+/* line 1, css/_index.scss */
+header .fa {
+  display: inline-block;
+  float: right;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
 }
 
-/* line 45, css/_index.scss */
+/* line 1, css/_index.scss */
+#languesreseaux li {
+  display: inline-block;
+}
+
+/* line 1, css/_index.scss */
+#menu-item-34 {
+  font-family: quicksand;
+}
+
+/* line 1, css/_index.scss */
+#menu-item-35 {
+  font-family: quicksand;
+}
+
+/* line 1, css/_index.scss */
+#menu-item-37 {
+  float: right;
+}
+
+/* line 1, css/_index.scss */
+#menu-item-36 {
+  float: right;
+}
+
+/* line 1, css/_index.scss */
 header .fa {
   display: inline-block;
   float: right;
@@ -632,39 +664,39 @@ header .fa {
   padding-left: 10px;
 }
 
-/* line 57, css/_index.scss */
+/* line 1, css/_index.scss */
 .caption {
   display: center;
   text-align: justify;
 }
 
-/* line 62, css/_index.scss */
+/* line 1, css/_index.scss */
 .aprecuvignette {
   font-size: 25px;
 }
 
-/* line 66, css/_index.scss */
+/* line 1, css/_index.scss */
 .btn-primary {
   background-image: -webkit-linear-gradient(top, #a7b4c0 0, #a7b4c0 100%);
   border-color: #A7B4C0;
   float: center;
 }
 
-/* line 72, css/_index.scss */
+/* line 1, css/_index.scss */
 .btndisplay {
   float: center;
   text-align: center;
 }
 
-/* line 77, css/_index.scss */
+/* line 1, css/_index.scss */
 #footer {
   display: inline;
   text-align: center;
   font-size: 28px;
-  color: #32383d;
+  color: #32383D;
 }
 
-/* line 84, css/_index.scss */
+/* line 1, css/_index.scss */
 #slider {
   display: table;
   /* déclenche le comportement table */
@@ -673,14 +705,14 @@ header .fa {
   padding-bottom: 5px;
 }
 
-/* line 91, css/_index.scss */
+/* line 1, css/_index.scss */
 #slider img {
   display: block;
   width: 100%;
   opacity: 0.8;
 }
 
-/* line 97, css/_index.scss */
+/* line 1, css/_index.scss */
 #slidertext {
   display: table-cell;
   /* déclenche le comportement cellule de table */
@@ -689,246 +721,83 @@ header .fa {
   position: relative;
 }
 
-/* line 104, css/_index.scss */
+/* line 1, css/_index.scss */
 #slidertext .content {
-  height: 100px;
+  height: 73%;
   margin-top: -50px;
-  /* Hauteur / 2 : 100 / 2 = 50*/
   top: 50%;
   width: 100%;
   position: absolute;
   color: white;
   font-size: 60px;
   text-align: center;
-  text-shadow: 2px 3px 10px rgba(0, 0, 0, 0);
+  text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.75);
+}
+
+/* line 1, css/_index.scss */
+#tablehover {
+  display: table;
+  /* déclenche le comportement table */
+  width: 100%;
+  height: 50%;
+  color: black;
 }
 
 /* MISE EN FORME DE MES VIGNETTES */
-/* line 117, css/_index.scss */
-.vignettes {
+/* line 1, css/_index.scss */
+.vignettes-invisibles {
   display: none;
-}
-
-/* line 120, css/_index.scss */
-article:hover .vignettes {
-  display: inline;
 }
 
 /* MEDIA QUERIES POUR LE RESPONSIVE */
 @media (max-width: 990px) {
-  /* line 126, css/_index.scss */
+  /* line 1, css/_index.scss */
   .cachevignette3 {
     display: none;
   }
 }
 @media (min-width: 320px) and (max-width: 490px) {
-  /* line 132, css/_index.scss */
+  /* line 1, css/_index.scss */
   h2 {
     font-size: 100%;
   }
 
-  /* line 135, css/_index.scss */
+  /* line 1, css/_index.scss */
   a #villes {
     font-size: 30px;
     word-spacing: 10px;
   }
 }
 @media (min-width: 420px) {
-  /* line 142, css/_index.scss */
+  /* line 1, css/_index.scss */
   h2 {
-    font-size: 170%;
+    font-size: 100%;
   }
 }
 /* FOOTER */
-/* line 149, css/_index.scss */
+/* line 1, css/_index.scss */
 footer {
   clear: both;
-  word-spacing: 40px;
+  word-spacing: 10px;
   text-align: center;
   color: #32383D;
   font-family: quicksand;
   font-size: 20px;
 }
 
-/* line 158, css/_index.scss */
+/* line 1, css/_index.scss */
 footer a {
   color: #32383D;
   font-size: 10px;
 }
 
-/* ### HOME ### */
-/* line 6, css/style.scss */
-body {
-  padding-top: 100px;
+/* line 1, css/_index.scss */
+footer .heure {
+  font-size: 10px;
 }
 
-/* line 8, css/style.scss */
-h1 {
-  text-align: center;
-  font-family: grand hotel;
-  font-size: 200%;
-  padding-bottom: 8px;
-  font-weight: 100;
-}
-
-/* line 16, css/style.scss */
-h2 {
-  text-align: center;
-  font-family: grand hotel;
-  line-height: 100%;
-}
-
-/* line 22, css/style.scss */
-nav {
-  padding-top: 22px;
-}
-
-/* line 26, css/style.scss */
-#villes {
-  text-align: center;
-  word-spacing: 70px;
-}
-
-/* line 31, css/style.scss */
-.villes {
-  color: #32383D;
-  text-align: center;
-  font-family: Quicksand;
-  font-size: 20px;
-  line-height: 100%;
-}
-
-/* #languesreseaux{
-    display: inline-block;
-} */
-/* line 43, css/style.scss */
-.langues {
-  border-left: 10px;
-  margin-left: 10px;
-}
-
-/* line 48, css/style.scss */
-header .fa {
-  display: inline-block;
-  float: right;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  border-right: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-
-/* line 60, css/style.scss */
-.caption {
-  display: center;
-  text-align: justify;
-}
-
-/* line 65, css/style.scss */
-.aprecuvignette {
-  font-size: 25px;
-}
-
-/* line 69, css/style.scss */
-.btn-primary {
-  background-image: -webkit-linear-gradient(top, #a7b4c0 0, #a7b4c0 100%);
-  border-color: #A7B4C0;
-  float: center;
-}
-
-/* line 75, css/style.scss */
-.btndisplay {
-  float: center;
-  text-align: center;
-}
-
-/* line 80, css/style.scss */
-#footer {
-  display: inline;
-  text-align: center;
-  font-size: 28px;
-  color: #32383D;
-}
-
-/* line 87, css/style.scss */
-#slider {
-  display: table;
-  /* déclenche le comportement table */
-  width: 100%;
-  height: 100%;
-  padding-bottom: 5px;
-}
-
-/* line 94, css/style.scss */
-#slider img {
-  display: block;
-  width: 100%;
-  opacity: 0.8;
-}
-
-/* line 100, css/style.scss */
-#slidertext {
-  display: table-cell;
-  /* déclenche le comportement cellule de table */
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-/* line 107, css/style.scss */
-#slidertext .content {
-  height: 100px;
-  margin-top: -50px;
-  /* Hauteur / 2 : 100 / 2 = 50*/
-  top: 50%;
-  width: 100%;
-  position: absolute;
-  color: white;
-  font-size: 60px;
-  text-align: center;
-  text-shadow: 2px 3px 10px rgba(0, 0, 0, 0);
-}
-
-/* MISE EN FORME DE MES VIGNETTES */
-/* line 120, css/style.scss */
-.vignettes {
-  display: none;
-}
-
-/* line 123, css/style.scss */
-article:hover .vignettes {
-  display: inline;
-}
-
-/* MEDIA QUERIES POUR LE RESPONSIVE */
-@media (max-width: 990px) {
-  /* line 129, css/style.scss */
-  .cachevignette3 {
-    display: none;
-  }
-}
-@media (min-width: 320px) and (max-width: 490px) {
-  /* line 135, css/style.scss */
-  h2 {
-    font-size: 100%;
-  }
-
-  /* line 138, css/style.scss */
-  a #villes {
-    font-size: 30px;
-    word-spacing: 10px;
-  }
-}
-@media (min-width: 420px) {
-  /* line 145, css/style.scss */
-  h2 {
-    font-size: 170%;
-  }
-}
 /* FOOTER */
-/* line 152, css/style.scss */
+/* line 7, css/style.scss */
 footer {
   clear: both;
   word-spacing: 40px;
@@ -938,14 +807,14 @@ footer {
   font-size: 20px;
 }
 
-/* line 161, css/style.scss */
+/* line 16, css/style.scss */
 footer a {
   color: #32383D;
   font-size: 10px;
 }
 
 /* MISE EN FORME DE MES PAGES VILLES */
-/* line 167, css/style.scss */
+/* line 22, css/style.scss */
 .uk-grid > * {
   margin: 0;
   padding-left: 25px;
